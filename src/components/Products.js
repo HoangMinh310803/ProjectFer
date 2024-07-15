@@ -3,19 +3,19 @@ import { useState, useEffect, useRef } from "react";
 import Footer from "./Footer";
 import { AiOutlineSearch } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+
 const Products = () => {
   const [category, setCategory] = useState([]);
-  const [categoryCurrent, setCategoryCurrent] = useState([]);
+
   const [products, setProducts] = useState([]);
-  const [productsetCurrent, setProductCurrent] = useState([]);
+
   const searchByName = useRef("");
   const [paggingProducts, setPaggingProducts] = useState([]);
   const [pagging, setPagging] = useState([]);
   const [isChange, setIsChange] = useState(true);
   const [searchedProduct, setSearchedProduct] = useState([]);
   let myArrayRef = useRef([]);
-  const { phoneId } = useParams();
+
   useEffect(() => {
     fetch("http://localhost:9999/Category")
       .then((res) => res.json())
@@ -53,7 +53,7 @@ const Products = () => {
         setSearchedProduct(result);
         setProducts(result);
       });
-  }, [isChange]);
+  }, [setIsChange]);
   useEffect(() => {
     if (searchedProduct.length >= 8) {
       setPaggingProducts(searchedProduct.slice(0, 8));
