@@ -501,6 +501,18 @@
       "roll": 0,
       "password": "123456",
       "id": "9NTN_Y6"
+    },
+    {
+      "id": "4d0a",
+      "firstName": "minh",
+      "lastName": "hoang",
+      "phone": "0899814922",
+      "address": "",
+      "email": "minhnhhe176375@fpt.edu.vn",
+      "dateOfBirth": "",
+      "account": "minhdz",
+      "roll": 0,
+      "password": "1234567"
     }
   ]
 }

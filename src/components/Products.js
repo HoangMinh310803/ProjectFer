@@ -53,7 +53,7 @@ const Products = () => {
         setSearchedProduct(result);
         setProducts(result);
       });
-  }, [setIsChange]);
+  }, [isChange]);
   useEffect(() => {
     if (searchedProduct.length >= 8) {
       setPaggingProducts(searchedProduct.slice(0, 8));
@@ -82,7 +82,7 @@ const Products = () => {
   };
   const searchByCategory = (id) => {
     let list = [...products];
-    list = list.filter((p) => id === p.Category_ID);
+    list = list.filter((p) => id == p.Category_ID);
     setSearchedProduct(list);
     myArrayRef = [];
     document.getElementById("1").checked = false;

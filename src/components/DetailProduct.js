@@ -12,7 +12,7 @@ const DetailProduct = () => {
     fetch("http://localhost:9999/Product")
       .then((res) => res.json())
       .then((result) => {
-        let product = result.filter((p) => p.id === id)[0];
+        let product = result.filter((p) => p.id == id)[0];
         console.log(product);
         setPhone(product);
       })
